@@ -3,10 +3,10 @@ import { getAllFilms } from "../getPeliculas";
 
 export const useFilm = () =>{
 
-    const [film, setFilm] = useState()
+    const [films, setFilm] = useState([])
 
-    const allfilms = async () => {
-        const data = await getAllFilms()
+    const allfilms = async (page) => {
+        const data = await getAllFilms(page)
         setFilm(data); 
     };
 
@@ -14,6 +14,6 @@ export const useFilm = () =>{
         allfilms();
     }, []);
 
-    return film 
+    return {films, allfilms}
 }
 

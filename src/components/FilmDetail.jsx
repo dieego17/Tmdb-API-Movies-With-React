@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useDetailsFilms } from "../services/hooks/useDetailsFilms"
-import { Link } from "react-router-dom"; 
+import CardFilmDetail from "./CardFilmDetail";
+
 
 function FilmDetail() {
 
@@ -9,48 +10,11 @@ function FilmDetail() {
   const film = useDetailsFilms(param)
 
   return (
-    <section className="container w-75 mt-4 p-3 border border-secondary rounded" key={film.id}>
-      <div className="d-flex col-12">
-        <article className="col-4 p-4">
-          <img src={`https://image.tmdb.org/t/p/w500${film.poster_path}`} className="w-100" alt="" />
-        </article>
-        <aside className="col-8 p-4">
-          <p>
-            <span className="text-danger">Título: </span>{film.title}
-          </p>
-          <p>
-            <span className="text-danger">Fecha: </span>{film.release_date}
-          </p>
-          <p>
-            <span className="text-danger">Puntuación: </span>{film.vote_count}
-          </p>
-          <p>
-            <span className="text-danger">Puntuación Media: </span>{film.vote_average}
-          </p>
-          <p>
-            <span className="text-danger">Resumen: </span>{film.overview}
-          </p>
-          <p>
-            {film.homepage !== "" ? (
-              <>
-                <span className="text-danger">Web: </span>
-                <a href={film.homepage}>{film.homepage}</a>
-              </>
-            ) : (
-              ""
-            )}
-          </p>
-
-
-
-
-          
-        </aside>
-      </div>
-      <Link to={'/'}>
-          <button className="btn btn-danger col-12">Volver</button>
-      </Link>
-    </section>
+    <>
+      {
+        film && <CardFilmDetail key={film.id} film={film} />
+      }
+    </>
   )
 }
 

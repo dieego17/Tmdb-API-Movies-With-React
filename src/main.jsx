@@ -12,12 +12,11 @@ import Home from './components/Home'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
-      <Route path='/' element={<Layout />} >
-        <Route index element={<Home />} /> 
-      </Route>
-        <Route path='films/:id' element= {<FilmDetail />}/>
+      <Route path='/' element={<Layout />} />
 
-        <Route path='*' element={<Navigate to='/'/>} />
+      <Route path='films/:id' element= {<FilmDetail />}/>
+
+      <Route path='*' element={<Navigate to='/'/>} />
     </Routes>
   </BrowserRouter>
 )

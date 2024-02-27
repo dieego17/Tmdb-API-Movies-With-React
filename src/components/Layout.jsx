@@ -1,17 +1,20 @@
-
+import { useFilm } from "../services/hooks/useFilm" 
+import Home from "./Home"
 import Menu from "./Menu"
-import { Outlet } from "react-router-dom"
+
 
 
 function Layout() {
+  const {films, allfilms} = useFilm()
+
   return (
     <div>
         <header>
-          <Menu />
+          <Menu allfilms={allfilms} />
         </header>
 
         <main className="m-5">
-          <Outlet />
+          <Home films={films} />
         </main>
     </div>
   )

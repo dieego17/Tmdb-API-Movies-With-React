@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { getOneFilm } from '../getOneFilm' 
 
 export const useDetailsFilms = (param) =>{
-    const [films, setFilms] = useState({})
+    const [films, setFilms] = useState([])
 
     const loadFilms = async () =>{
         const oneFilm = await getOneFilm(param)

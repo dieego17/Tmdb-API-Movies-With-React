@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom" 
+
 function CardFilm({ film }) {
 
   return (
@@ -10,7 +11,7 @@ function CardFilm({ film }) {
           <p className="card-text" style={{color: 'white'}}>{film.release_date}</p>
         </div>
         <Link className="btn btn-danger" to={`/films/${film.id}`}>
-          Más Detalles
+          MÁS DETALLES
         </Link>
     </article>
   )

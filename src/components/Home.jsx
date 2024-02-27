@@ -1,17 +1,17 @@
-import { useFilm } from "../services/hooks/useFilm" 
+/* eslint-disable react/prop-types */
 import CardFilm from './CardFilm'
 
 
-function Home() {
-  const films = useFilm()
+function Home({ films }) {
 
   return (
     <section className="container border border-secondary rounded d-flex flex-wrap justify-content-center">
       {
-        films ? films.map(film => (
+        films.map(film => (
           <CardFilm key={film.id} film={film} />
-        )) : <p>Loading...</p>
+        ))
       }
+
     </section>
   )
 }
