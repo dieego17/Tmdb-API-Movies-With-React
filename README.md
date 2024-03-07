@@ -1,8 +1,19 @@
-# React + Vite
+# Cartelera de Películas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación web de una cartelera de películas construida utilizando React. La aplicación obtiene datos de una API de películas y muestra una lista de películas populares, así como detalles adicionales sobre cada película seleccionada.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Muestra una lista de películas populares obtenidas de una API externa.
+- Permite ver detalles adicionales de cada película, como título, sinopsis, puntuación, etc.
+- Implementa un diseño atractivo y responsivo utilizando React.
+
+## Tecnologías utilizadas
+
+- React
+- JavaScript
+- HTML
+- CSS
+- API externa de películas (TMDB)
+
+
